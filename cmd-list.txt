@@ -1,0 +1,108 @@
+    1  uname -a
+    2  ps
+    3  pwd
+    4  ls -altr
+    5  java --version
+    6  sudo apt install default-jre
+    7  apt-get update
+    8  apt-get update --fix-missing
+    9  sudo apt-get update --fix-missing
+   10  sudo apt install default-jre
+   11  java --version
+   12  pwd
+   13  ls
+   14  ls -altr
+   15  mkdir Projects
+   16  cd Projects/
+   17  ls
+   18  mkdir w3-java-tut
+   19  cd w3-java-tut/
+   20  ls
+   21  touch Main.java
+   22  vi Main.java 
+   23  javac Main.java 
+   24  ls -altr
+   25  sudo apt install default-jdk
+   26  javac Main.java 
+   27  vi Main.java 
+   28  javac Main.java 
+   29  java Main 
+   30  vi Main.java 
+   31  javac Main.java 
+   32  vi Main.java 
+   33  javac Main.java 
+   34  java Main 
+   35  vi Main.java 
+   36  javac Main.java 
+   37  java Main 
+   38  vi Main.java 
+   39  javac Main.java 
+   40  vi Main.java 
+   41  javac Main.java 
+   42  java Main 
+   43  vi Main.java 
+   44  javac Main.java 
+   45  java Main 
+   46  vi Main.java 
+   47  ls -altr
+   48  wsl --v
+   49  uname -a
+   50  wsl --list --verbose
+   51  sudo apt-get updated
+   52  apt-get update
+   53  sudo apt-get update
+   54  curl -fsSL https://get.docker.com -o get-docker.sh
+   55  sudo sh get-docker.sh
+   56  uname -a
+   57  spring --version
+   58  mvn -version
+   59  mvnw -version
+   60  java -v
+   61  java --version
+   62  ps
+   63  docker run hello-world
+   64  uname -a
+   65  cd Projects/
+   66  ls
+   67  mkdir my-web-app && cd my-web-app
+   68  uname -a
+   69  systemd -v
+   70  sudo vi /etc/wsl.conf
+   71  sudo apt update && sudo apt upgrade -y
+   72  apt list|grep ca-certificates
+   73  sudo apt install ca-certificates curl gnupg lsb-release -y
+   74  ls /etc/apt/keyrings
+   75  ls /etc/apt/ |grep keyrings
+   76  cd /etc/apt/keyrings
+   77  ls
+   78  ls -altr
+   79  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   80  ls /etc/apt/keyrings
+   81  cd
+   82  cd Projects/
+   83  ls
+   84  sudo apt update
+   85  sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+   86  apt list|grep docker
+   87  docker -version
+   88  docker --help
+   89  docker version
+   90  docker $rahoule
+   91  sudo usermod -aG docker $USER
+   92  uname -a
+   93  docker --version
+   94  ps -ef|grep systemd
+   95  sudo vi /etc/wsl.conf
+   96  curl -fsSL https://get.docker.com -o get-docker.sh
+   97  ls -altr
+   98  sudo sh get-docker.sh 
+   99  cat /etc/group
+  100  grp
+  101  sudo usermod -aG docker $USER
+  102  cat /etc/group
+  103  pushd ../../../
+  104  cd ..
+  105  cd ../
+  106  ls -altr
+  107  history|more
+  108  history > ~/cmd-list.txt
