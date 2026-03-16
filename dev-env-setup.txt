@@ -1,0 +1,47 @@
+# ensure WSL2 probably ubuntu 24.04
+uname -a
+# ensure openjdk 21.0.10 (that is what was used for this repo anyways)
+java --version
+# ensure maven 3.8.7
+mvn --version
+
+#curl -fsSL https://get.docker.com -o get-docker.sh
+#sudo sh get-docker.sh
+#sudo apt update && sudo apt upgrade -y
+
+# some docker stuff
+#apt list|grep ca-certificates
+#sudo apt install ca-certificates curl gnupg lsb-release -y
+#ls /etc/apt/keyrings
+#cd /etc/apt/keyrings
+#ls -altr
+#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+ls /etc/apt/keyrings
+cd
+cd Projects/
+ls
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+apt list|grep docker
+docker -version
+docker --help
+docker version
+docker $rahoule
+sudo usermod -aG docker $USER
+uname -a
+docker --version
+ps -ef|grep systemd
+sudo vi /etc/wsl.conf
+curl -fsSL https://get.docker.com -o get-docker.sh
+ls -altr
+sudo sh get-docker.sh 
+cat /etc/group
+grp
+sudo usermod -aG docker $USER
+cat /etc/group
+pushd ../../../
+cd ..
+cd ../
+ls -altr
+history|more
+history > ~/cmd-list.txt
