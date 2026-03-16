@@ -1,39 +1,39 @@
 cd /home/rahoule/Projects/spring-hello-2
-# Download the project as a zip file
+# Download the project as a zip file, important to have the -d type=maven-project line, otherwise
+#   the default is gradle and then there is no pom.xml file, duh.
 curl https://start.spring.io/starter.zip \
   -d dependencies=web \
   -d javaVersion=21 \
   -d type=maven-project \
   -d name=demo \
   -o demo.zip
-
 # Unzip it into a folder named 'demo'
 unzip demo.zip -d demo
-
 # Enter the folder
 cd demo
-
 nano src/main/java/com/example/demo/DemoApplication.java
+# insert this code for a VERY simple hello world type of app
+        package com.example.demo;
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
+        import org.springframework.web.bind.annotation.GetMapping;
+        import org.springframework.web.bind.annotation.RestController;
 
-package com.example.demo;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@SpringBootApplication
-@RestController
-public class DemoApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
-    }
-
-    @GetMapping("/")
-    public String sayHello() {
-        return "<h1>Success!</h1><p>Spring Boot is running in WSL2 using standard APT tools.</p>";
-    }
-}
-
+        @SpringBootApplication
+        @RestController
+        public class DemoApplication {
+            public static void main(String[] args) {
+                SpringApplication.run(DemoApplication.class, args);
+            }
+            @GetMapping("/")
+            public String sayHello() {
+                return "<h1>Success!</h1><p>Spring Boot is running in WSL2 using standard APT tools.</p>";
+            }
+        }
 # Compile and run the app
+cd /home/rahoule/Projects/spring-hello-2/demo
 mvn spring-boot:run
+# see the result
+# spin up Edge (that's what I'm using)
+# url: localhost:8080
+# should see Success! Spring Boot.....
