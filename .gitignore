@@ -1,0 +1,31 @@
+### Java & Spring Boot ###
+*.class
+*.jar
+*.war
+*.ear
+/target/
+/build/
+.gradle/
+bin/
+
+### WSL2 & OS Specific ###
+#.DS_Store
+#Thumbs.db
+#*.swp
+
+### IDEs (IntelliJ, VS Code, Eclipse) ###
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+
+### Environment & Logs ###
+*.log
+.env
+.env.local
+
+### Maven/Wrapper ###
+.mvn/wrapper/maven-wrapper.jar
