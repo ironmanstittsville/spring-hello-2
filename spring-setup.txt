@@ -37,3 +37,4 @@ mvn spring-boot:run
 # spin up Edge (that's what I'm using)
 # url: localhost:8080
 # should see Success! Spring Boot.....
+# Ctrl-C in terminal to kill it
