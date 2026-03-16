@@ -1,0 +1,39 @@
+cd /home/rahoule/Projects/spring-hello-2
+# Download the project as a zip file
+curl https://start.spring.io/starter.zip \
+  -d dependencies=web \
+  -d javaVersion=21 \
+  -d type=maven-project \
+  -d name=demo \
+  -o demo.zip
+
+# Unzip it into a folder named 'demo'
+unzip demo.zip -d demo
+
+# Enter the folder
+cd demo
+
+nano src/main/java/com/example/demo/DemoApplication.java
+
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
+    @GetMapping("/")
+    public String sayHello() {
+        return "<h1>Success!</h1><p>Spring Boot is running in WSL2 using standard APT tools.</p>";
+    }
+}
+
+# Compile and run the app
+mvn spring-boot:run
